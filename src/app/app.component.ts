@@ -15,6 +15,7 @@ interface MenuItem {
 })
 export class AppComponent implements OnInit  {
   user: any;
+  title = 'curso-angular-testes-unitarios';
 
   menuItems: MenuItem[] = [
     { label: 'Item 1', value: 'item-1' },

@@ -1,19 +1,16 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FixProblemsService } from './fix-problems.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('FixProblemsService', () => {
   let service: FixProblemsService;
-  let htppTestingController: HttpTestingController;
-  let url: any;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule],
     });
     service = TestBed.inject(FixProblemsService);
-    htppTestingController = TestBed.inject(HttpTestingController)
-    url = 'http://localhost:3000'
   });
 
   it('should be created', () => {

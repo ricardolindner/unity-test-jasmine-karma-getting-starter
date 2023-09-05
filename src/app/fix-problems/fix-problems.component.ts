@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { StubComponent } from '../stub/stub.component';
-
 import {MatDialog} from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StubComponent } from '../stub/stub.component';
 
 @Component({
   selector: 'app-fix-problems',
   templateUrl: './fix-problems.component.html',
   styleUrls: ['./fix-problems.component.scss']
 })
-export class FixProblemsComponent implements OnInit {
+export class FixProblemsComponent implements OnInit{
   form!: FormGroup;
   price: number = 0;
   constructor(private dialog: MatDialog, private fb: FormBuilder) {

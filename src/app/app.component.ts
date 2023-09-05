@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
-
 interface MenuItem {
   label: string;
   value: string;
@@ -11,10 +9,11 @@ interface MenuItem {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit {
   user: any;
+  title = 'curso-angular-testes-unitarios';
 
   menuItems: MenuItem[] = [
     { label: 'Item 1', value: 'item-1' },
@@ -22,25 +21,25 @@ export class AppComponent implements OnInit  {
     { label: 'Item 3', value: 'item-3' },
   ];
 
-
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.user = {name: 'Danilo', email: 'danilodev.silva@gmail.com', password: '091011'}
+    this.user = {
+      name: 'Danilo',
+      email: 'danilodev.silva@gmail.com',
+      password: '091011',
+    };
   }
 
   getUserMessage(event: any) {
-    console.log('Mensagem do filho: ', event)
+    console.log('Mensagem do filho: ', event);
   }
 
   goTo(route: string) {
-    this.router.navigate([`/${route}`])
+    this.router.navigate([`/${route}`]);
   }
 
   onMenuItemSelected(item: string) {
-    console.log('item selecionado -->> ', item)
+    console.log('item selecionado -->> ', item);
   }
-
 }

@@ -4,16 +4,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-stub',
   templateUrl: './stub.component.html',
-  styleUrls: ['./stub.component.scss']
+  styleUrls: ['./stub.component.scss'],
 })
 export class StubComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   goTo() {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home']);
   }
 }

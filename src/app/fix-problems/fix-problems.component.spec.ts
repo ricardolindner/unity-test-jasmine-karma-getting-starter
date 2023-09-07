@@ -16,7 +16,7 @@ describe('FixProblemsComponent', () => {
           useValue: {},
         },
       ],
-      imports: [MatDialogModule, ReactiveFormsModule],
+      imports: [MatDialogModule, ReactiveFormsModule, FormsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FixProblemsComponent);

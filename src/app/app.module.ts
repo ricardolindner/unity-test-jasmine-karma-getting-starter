@@ -10,6 +10,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { DebuggerTestsComponent } from './debugger-tests/debugger-tests.component';
 import { RequestComponent } from './request/request.component';
 import { MatchersJasmineComponent } from './matchers-jasmine/matchers-jasmine.component';
+import { SpyonComponent } from './spyon/spyon.component';
+import { SpyOnPropertyComponent } from './spy-on-property/spy-on-property.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MatchersJasmineComponent } from './matchers-jasmine/matchers-jasmine.co
     StubComponent,
     DebuggerTestsComponent,
     RequestComponent,
-    MatchersJasmineComponent
+    MatchersJasmineComponent,
+    SpyonComponent,
+    SpyOnPropertyComponent
   ],
   imports: [
     BrowserModule,

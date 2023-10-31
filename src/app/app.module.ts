@@ -12,6 +12,7 @@ import { RequestComponent } from './request/request.component';
 import { MatchersJasmineComponent } from './matchers-jasmine/matchers-jasmine.component';
 import { SpyonComponent } from './spyon/spyon.component';
 import { SpyOnPropertyComponent } from './spy-on-property/spy-on-property.component';
+import { AsynchronousComponentComponent } from './asynchronous-component/asynchronous-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SpyOnPropertyComponent } from './spy-on-property/spy-on-property.compon
     RequestComponent,
     MatchersJasmineComponent,
     SpyonComponent,
-    SpyOnPropertyComponent
+    SpyOnPropertyComponent,
+    AsynchronousComponentComponent
   ],
   imports: [
     BrowserModule,

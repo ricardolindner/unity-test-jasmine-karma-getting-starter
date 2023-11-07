@@ -4,19 +4,18 @@ import { HttpService } from '../service/http.service';
 @Component({
   selector: 'app-request',
   templateUrl: './request.component.html',
-  styleUrls: ['./request.component.scss']
+  styleUrls: ['./request.component.scss'],
 })
 export class RequestComponent implements OnInit {
   name!: string;
   email!: string;
   age!: string;
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getUsers() {
-    this.http.getUsers().subscribe()
+    this.http.getUsers().subscribe();
   }
 
   postUsers() {
@@ -24,19 +23,19 @@ export class RequestComponent implements OnInit {
       id: Math.random(),
       name: this.name,
       email: this.email,
-      age: this.age
-    }
+      age: this.age,
+    };
 
-    this.http.postUser(user).subscribe()
+    this.http.postUser(user).subscribe();
   }
 
   putUsers(id: any) {
     const user = {
       name: this.name,
       email: this.email,
-      age: this.age
-    }
-    this.http.putUser(id, user).subscribe()
+      age: this.age,
+    };
+    this.http.putUser(id, user).subscribe();
   }
 
   deleteUser(id: number) {

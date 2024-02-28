@@ -209,4 +209,17 @@ describe('HttpService', () => {
     expect(request.request.headers.has('content-type')).toEqual(true);
     expect(request.request.headers.has('Authorization')).toEqual(true);
   });
+
+  it('Deve realizar chamada GET por id', () => {
+    const id = 3;
+    const response = { name: 'Danilo' };
+    service.getUsersById(id).subscribe((res) => {
+      expect(res).toBe(response);
+    });
+    const request = htppTestingController.expectOne(`${url}/users/${id}`);
+
+    expect(request.request.method).toBe('GET');
+    expect(request.request.url).toBe(`${url}/users/${id}`);
+    request.flush(response);
+  });
 });
